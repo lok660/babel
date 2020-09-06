@@ -1,5 +1,3 @@
-const { reject } = require("core-js/fn/promise")
-
 const hello = args => {
   console.log(...args)
 }
