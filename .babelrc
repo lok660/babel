@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          //	配支持的环境
+          "browsers": ["last 2 versions", "safari >= 7"],
+          "node": "current"
+        },
+        "modules": false, //设置ES6 模块转译的模块格式 默认是 commonjs
+        "debug": true, // 开启debug后，编译结果会得到使用的 targets，plugins，polyfill 等信息
+        "useBuiltIns": "usage", //是否开启自动支持 polyfill
+        "include": [], // 总是启用哪些 plugins
+        "exclude": [], //  强制不启用哪些 plugins，用来防止某些插件被启用
+        "corejs": "3" // 声明corejs版本
+      }
+    ]
+  ],
+  "plugins": [
+    // "transform-react-jsx" // 如果是需要支持 jsx 这个东西要单独装一下。
+    // ,
+    "@babel/plugin-transform-runtime"
+  ]
+}
+
+// {
+//   "presets": [
+//     [
+//       "es2015"
+//     ]
+//   ],
+//   "plugins": [
+//     "transform-react-jsx", // 如果是需要支持 jsx 这个东西要单独装一下。
+//     "transform-regenerator"
+//   ]
+// }
